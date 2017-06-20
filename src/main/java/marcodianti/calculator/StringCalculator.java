@@ -8,11 +8,14 @@ public class StringCalculator {
         if(numbers.equals("")){
 
         }else{
-            StringTokenizer st=new StringTokenizer(numbers,",",false);
-            while(st.hasMoreTokens()){
-                total+=Integer.parseInt(st.nextToken());
-
-            }
+            StringTokenizer st1=new StringTokenizer(numbers,",",false);
+            while(st1.hasMoreTokens()){
+            	String subString=st1.nextToken();
+            	StringTokenizer st2=new StringTokenizer(subString,"\n",false);
+            	while(st2.hasMoreTokens()){
+            		total+=Integer.parseInt(st2.nextToken());
+            	}
+               }
         }
         return total;
     }

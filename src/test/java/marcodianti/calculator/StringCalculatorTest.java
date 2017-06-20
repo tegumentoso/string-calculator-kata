@@ -28,5 +28,10 @@ public class StringCalculatorTest {
 		
 		assertEquals(6, sc.add("3,2,1"));
 	}
+	@Test
+	public final void inputWithCommasAndNewlines(){
+		
+		assertEquals(6, sc.add("1\n2,3"));
+	}
 	
 }
