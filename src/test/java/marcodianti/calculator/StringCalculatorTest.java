@@ -73,4 +73,12 @@ public class StringCalculatorTest {
 			assertEquals(StringCalculator.NEGATIVE_NUMBERS_EXCEPTION_TEXT+"-2-4",e.getMessage());
 		}
 	}
+	@Test
+	public final void bigNumbersAreIgnored(){
+		try {
+			assertEquals(5, sc.add("3,1007,2,2000"));
+		} catch (NegativeNumberException e) {
+			e.printStackTrace();
+		}
+	}
 }

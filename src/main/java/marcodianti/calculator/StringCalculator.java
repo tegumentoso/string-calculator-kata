@@ -26,7 +26,10 @@ public class StringCalculator {
 				while (st2.hasMoreTokens()) {
 					int parsedInt=Integer.parseInt(st2.nextToken());
 					if(parsedInt>=0){
-						total += parsedInt;	
+						if(parsedInt<1000){
+							total += parsedInt;
+						}
+							
 					}else{
 						negatives.add(parsedInt);
 						
