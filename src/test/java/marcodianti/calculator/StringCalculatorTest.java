@@ -23,5 +23,10 @@ public class StringCalculatorTest {
 		
 		assertEquals(5, sc.add("3,2"));
 	}
+	@Test
+	public final void sumThreeNumbers(){
+		
+		assertEquals(6, sc.add("3,2,1"));
+	}
 	
 }
